@@ -8,10 +8,6 @@ import os
 # PubMed API Base URL
 env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".env"))
 load_dotenv(env_path)
-# PUBMED_API_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
-# PUBMED_SUMMARY_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
-# PUBMED_FETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
-
 PUBMED_API_URL = os.getenv("PUBMED_API_URL")
 PUBMED_SUMMARY_URL = os.getenv("PUBMED_SUMMARY_URL")
 PUBMED_FETCH_URL =os.getenv("PUBMED_FETCH_URL")
@@ -131,34 +127,3 @@ if __name__ == "__main__":
 
 
 
-
-
-
-
-# import argparse
-# import pandas as pd
-# from pubmed_paper_fetcher.fetcher import fetch_paper_ids, fetch_paper_details, save_to_csv
-
-# def main():
-#     """Command-line entry point."""
-#     parser = argparse.ArgumentParser(description="Fetch PubMed papers with non-academic authors.")
-#     parser.add_argument("query", type=str, help="Search query for PubMed API")
-#     parser.add_argument("-d", "--debug", action="store_true", help="Enable debug mode")
-#     parser.add_argument("-f", "--file", type=str, help="Filename to save output (CSV)")
-
-#     args = parser.parse_args()
-
-#     paper_ids = fetch_paper_ids(args.query, args.debug)
-#     if not paper_ids:
-#         print("No papers found.")
-#         return
-
-#     papers = fetch_paper_details(paper_ids, args.debug)
-
-#     if args.file:
-#         save_to_csv(papers, args.file)
-#     else:
-#         print(pd.DataFrame(papers))
-
-# if __name__ == "__main__":
-#     main()
