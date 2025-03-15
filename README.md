@@ -22,7 +22,7 @@ D:\pubmed_project\
 │   ├── papers.csv                 # Output file with fetched papers
 ```
 
-## 🛠 Installation & Setup
+## Installation & Setup
 
 ### 1. Install **Poetry** (Dependency Manager)
 
@@ -99,15 +99,7 @@ poetry run pytest tests/
 poetry run black pubmed_paper_fetcher/
 ```
 
-##  License
 
-This project is **MIT Licensed**.
-
-##  Contact
-
-For queries or contributions, reach out to: **[your-email@example.com](mailto\:your-email@example.com)**
-
----
 
 
 
