@@ -35,7 +35,7 @@ pip install poetry
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/pubmed_paper_fetcher.git
+git clone [https://github.com/shakti2002/Aganitha_fetch_research_papers.git](https://github.com/shakti2002/Aganitha_fetch_research_papers.git)
 cd pubmed_paper_fetcher
 ```
 
@@ -60,7 +60,7 @@ PUBMED_API_KEY=your_pubmed_api_key_here
 To fetch papers related to **deep learning in pharma** and save them as `papers.csv`, run:
 
 ```bash
-poetry run python pubmed_paper_fetcher/main.py --query "deep learning in pharma" --output papers.csv
+poetry run get-papers-list "deep learning in pharma" -f papers.csv
 ```
 
 ##  How the Code Works
@@ -83,21 +83,7 @@ poetry run python pubmed_paper_fetcher/main.py --query "deep learning in pharma"
 - **[python-dotenv](https://pypi.org/project/python-dotenv/)** (Load API key from `.env` file)
 - **[PubMed Entrez API](https://www.ncbi.nlm.nih.gov/books/NBK25501/)** (Used for fetching research papers)
 
-## Additional Commands
 
-### Running Tests
-
-To test the code using `pytest`, run:
-
-```bash
-poetry run pytest tests/
-```
-
-### Formatting Code
-
-```bash
-poetry run black pubmed_paper_fetcher/
-```
 
 
 
